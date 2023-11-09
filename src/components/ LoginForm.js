@@ -8,11 +8,12 @@ class LoginForm extends React.Component {
   state = {
     loading: false,
   };
-
+  // onFinish()is a property
   onFinish = (data) => {
     this.setState({
       loading: true,
     });
+    
     login(data)
       .then(() => {
         message.success(`Login Successful`);
@@ -52,6 +53,7 @@ class LoginForm extends React.Component {
         </Form.Item>
 
         <Form.Item>
+          {/* click this button（htmlType="submit"）will trigger onFinish(), antd's design' */}
           <Button type="primary" htmlType="submit" loading={this.state.loading}>
             Login
           </Button>
