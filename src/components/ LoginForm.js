@@ -8,7 +8,7 @@ class LoginForm extends React.Component {
   state = {
     loading: false,
   };
-  // onFinish()is a property
+  // onFinish() is a property
   onFinish = (data) => {
     this.setState({
       loading: true,
